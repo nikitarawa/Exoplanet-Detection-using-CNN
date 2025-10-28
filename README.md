@@ -1,6 +1,6 @@
 # 🪐 Exoplanet Detection Using Convolutional Neural Networks (CNNs)
 
-### 🌌 Overview
+### Overview
 This project applies **deep learning** to automate the detection of **exoplanets** using light curve data from NASA’s **Kepler mission**.  
 By analysing small dips in a star’s brightness — known as **transits** — the model identifies potential exoplanets orbiting distant stars.  
 
@@ -9,7 +9,7 @@ The project demonstrates how **AI can accelerate astronomical discovery** by eff
 
 ---
 
-### 🎯 Objectives
+### Objectives
 - Detect planetary transits from light curve data using a CNN model.  
 - Preprocess and normalise raw Kepler data for training and testing.  
 - Evaluate model accuracy and interpret classification results.  
@@ -17,7 +17,7 @@ The project demonstrates how **AI can accelerate astronomical discovery** by eff
 
 ---
 
-### 🧩 Key Components
+### Key Components
 - **Dataset:** [Kepler-labelled time-series data (Kaggle)](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data)  
 - **Model:** 1D CNN implemented in **PyTorch** for binary classification (*transit* vs *no transit*).  
 - **Data Processing:** Noise reduction using the **Savitzky–Golay filter**, flux normalisation, and visual inspection of light curves.  
@@ -26,7 +26,7 @@ The project demonstrates how **AI can accelerate astronomical discovery** by eff
 
 ---
 
-### ⚙️ Methodology
+### Methodology
 1. **Data Preprocessing**
    - Loaded and cleaned Kepler CSV data.  
    - Smoothed flux values using Savitzky–Golay filtering.  
@@ -55,7 +55,7 @@ The CNN effectively detected exoplanet transits with high precision and recall, 
 
 ---
 
-### 🚀 Future Improvements
+### Future Improvements
 - Address **class imbalance** using SMOTE or weighted loss functions.  
 - Apply the model to **TESS data** for generalisation testing.  
 - Integrate **Explainable AI (XAI)** to interpret model predictions.  
