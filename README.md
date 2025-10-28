@@ -1,28 +1,79 @@
-**Introduction**
-This project focuses on automating the detection of exoplanets using light curve data from NASA’s Kepler mission. By analyzing subtle dips in a star’s brightness, we aim to identify potential exoplanet transits using a Convolutional Neural Network (CNN). The end-to-end pipeline involves preprocessing raw CSV data, converting brightness values into model-ready tensors, building a 1D CNN in PyTorch, and evaluating its performance on test data. This approach showcases how AI can accelerate astronomical discovery by efficiently analyzing large volumes of space data
+# 🪐 Exoplanet Detection Using Convolutional Neural Networks (CNNs)
 
-**What are Exoplantes?**
-Exoplanets are the planets that orbit stars outside our solar system. 
-Just like Earth orbits the Sun, exoplanets orbit other stars in the galaxy. Some are rocky like Earth, others are gas giants like Jupiter. Scientists study exoplanets to learn if there might be life beyond Earth or if some planets could be habitable!
+### 🌌 Overview
+This project applies **deep learning** to automate the detection of **exoplanets** using light curve data from NASA’s **Kepler mission**.  
+By analysing small dips in a star’s brightness — known as **transits** — the model identifies potential exoplanets orbiting distant stars.  
 
-**What is Keplers Data?**
-Kepler's data comes from NASA's Kepler Space Telescope, which was launched to find exoplanets (planets outside our solar system) on March 7th 2009.
-Kepler watched thousands of stars and looked for tiny dips in their brightness.
-If a planet passed in front of a star (like a mini eclipse), the star's light would dim a little - which is called a transit.
+A **1D Convolutional Neural Network (CNN)** built with **PyTorch** was trained to classify whether a given light curve indicates a planetary transit or not.  
+The project demonstrates how **AI can accelerate astronomical discovery** by efficiently processing large volumes of observational data.
 
-**What does Keplers Data shows?**
-	• How bright each star is over time (called a light curve).
-	• When the brightness dips — which can mean a planet passed in front
-	• By studying these dips, we can figure out If a planet is there, How big it is, How far it is from its star, How long it takes to orbit that particular Star.
+---
 
+### 🎯 Objectives
+- Detect planetary transits from light curve data using a CNN model.  
+- Preprocess and normalise raw Kepler data for training and testing.  
+- Evaluate model accuracy and interpret classification results.  
+- Explore how AI can enhance large-scale data analysis in astronomy.  
 
-**Key components include:**
-	•	Dataset: Kepler-labelled time-series data from Kaggle
-	•	Methods: 1D CNN trained in PyTorch for binary classification (transit vs no transit)
-	•	Performance: Achieved ~99.12% accuracy and 99.56% F1-score on test data
-	•	Data Processing: Noise reduction with Savitzky–Golay filter, normalisation, and visual validation of transit curves
-	•	Goal: Automate exoplanet detection and improve the scalability of astronomical data analysis using deep learning
+---
 
-Future improvements involve addressing class imbalance, testing with TESS data, and implementing explainable AI techniques to interpret model predictions.
+### 🧩 Key Components
+- **Dataset:** [Kepler-labelled time-series data (Kaggle)](https://www.kaggle.com/datasets/keplersmachines/kepler-labelled-time-series-data)  
+- **Model:** 1D CNN implemented in **PyTorch** for binary classification (*transit* vs *no transit*).  
+- **Data Processing:** Noise reduction using the **Savitzky–Golay filter**, flux normalisation, and visual inspection of light curves.  
+- **Performance:** Achieved **~99.12% accuracy** and **99.56% F1-score** on test data.  
+- **Goal:** Improve the **efficiency and scalability** of exoplanet detection through deep learning.  
 
+---
 
+### ⚙️ Methodology
+1. **Data Preprocessing**
+   - Loaded and cleaned Kepler CSV data.  
+   - Smoothed flux values using Savitzky–Golay filtering.  
+   - Normalised and reshaped data into tensors suitable for CNN input.  
+
+2. **Model Development**
+   - Designed a 1D CNN with convolutional, pooling, and fully connected layers.  
+   - Used **Binary Cross-Entropy Loss** and **Adam Optimiser** for training.  
+   - Trained for 5 epochs using GPU runtime on Google Colab.  
+
+3. **Evaluation**
+   - Calculated Accuracy, Precision, Recall, and F1-score.  
+   - Analysed the confusion matrix for false positives and class imbalance.  
+
+---
+
+### 📊 Results
+| Metric | Value |
+|--------|--------|
+| **Accuracy** | 99.12% |
+| **Precision** | 99.12% |
+| **Recall** | 100% |
+| **F1-Score** | 99.56% |
+
+The CNN effectively detected exoplanet transits with high precision and recall, validating its capability to analyse complex astronomical data.
+
+---
+
+### 🚀 Future Improvements
+- Address **class imbalance** using SMOTE or weighted loss functions.  
+- Apply the model to **TESS data** for generalisation testing.  
+- Integrate **Explainable AI (XAI)** to interpret model predictions.  
+- Expand to **multi-class classification** for other stellar variability types.  
+
+---
+
+### 🛠️ Tools & Technologies
+`Python` • `PyTorch` • `NumPy` • `Pandas` • `SciPy` • `Matplotlib` • `Scikit-learn` • `Google Colab`
+
+---
+
+### 👩‍💻 Author
+**Nikita Rawat**  
+Bachelor of Computer & Information Sciences  
+*(Major: Data Science | Minor: Astronomy & Space Science)*  
+📍 Auckland, New Zealand  
+
+---
+
+> “Exploring the universe through data — where artificial intelligence meets astronomy.”
