@@ -16,3 +16,13 @@ If a planet passed in front of a star (like a mini eclipse), the star's light wo
 	• By studying these dips, we can figure out If a planet is there, How big it is, How far it is from its star, How long it takes to orbit that particular Star.
 
 
+**Key components include:**
+	•	Dataset: Kepler-labelled time-series data from Kaggle
+	•	Methods: 1D CNN trained in PyTorch for binary classification (transit vs no transit)
+	•	Performance: Achieved ~99.12% accuracy and 99.56% F1-score on test data
+	•	Data Processing: Noise reduction with Savitzky–Golay filter, normalisation, and visual validation of transit curves
+	•	Goal: Automate exoplanet detection and improve the scalability of astronomical data analysis using deep learning
+
+Future improvements involve addressing class imbalance, testing with TESS data, and implementing explainable AI techniques to interpret model predictions.
+
+
