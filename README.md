@@ -75,5 +75,3 @@ Bachelor of Computer & Information Sciences
 📍 Auckland, New Zealand  
 
 ---
-
-> “Exploring the universe through data — where artificial intelligence meets astronomy.”
